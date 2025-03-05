@@ -5,7 +5,7 @@
 header {
     height:2rem;
     padding: 0.5rem;
-    background-color: rgb(192, 250, 166);
+    background-color: rgb(120, 178, 216);
 }
 header * {
     display: inline-block;
@@ -36,14 +36,14 @@ header nav ul li {
 }
 
 main {
-    background-color: #fabada;
+    background-color: rgb(190, 108, 83);;
     padding-bottom:2rem;
     height: calc(100vh - 4rem);
     overflow:auto;
 }
 
 footer {
-    background-color: rgb(192, 250, 166);
+    background-color: rgb(120, 178, 216);
     height: 2rem;
     padding: 0.5rem;
 }
@@ -54,7 +54,7 @@ footer * {
     margin: 0 2rem;
 }
 .active {
-    background-color: #fabada;
+    background-color: rgb(255,255,0);
 }
 
 #contact-form {
