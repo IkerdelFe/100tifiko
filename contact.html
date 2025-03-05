@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+    <title>Contacto</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <p>Mi portfolio</p>
+            <ul id="nav-links">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link"><a href="projects.html">projects</a></li>
+                <li class="nav-link active"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <form id="contact-form">
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name">
+                    <label for="age">Edad</label>
+                    <input type="number" name="age" id="age">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <label for="language">Idioma</label>
+                    <select name="language" id="language">
+                        <option value="eus">Euskera</option>
+                        <option value="es">Castellano</option>
+                        <option value="en">English</option>
+                    </select>
+                    <div class="newsletter-input">
+                        <label for="subscribe">¿Quieres suscribirte a mi newsletter?</label>
+                        <input type="checkbox" name="subscribe" id="subscribe" >
+                    </div>
+                    <label >Tu equipo favorito</label>
+                    <div class="team-input">
+                        <label for="teathleticam">Athletic Club</label>
+                        <input type="radio" name="team" id="athletic" value="Athletic Club">
+                        <label for="real">Real Sociedad</label>
+                        <input type="radio" name="team" id="real" value="Real Sociedad">    
+                    </div>
+                </fieldset>
+                <label for="content">Escribe tu mensaje</label>
+                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Pedro Tomás 2025 &copy;</p>
+        <ul class="contact-list">
+            <li class="contact-link">
+                <a href="https://linkedin.com">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="contact-link">
+                <a href="https://github.com">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+
+    </footer>
+    <body background="https://wallpapers.com/images/hd/rainbow-gradient-background-4000-x-2250-vfohbmqe9bqphto6.jpg">
+</body>
+
+</html>
