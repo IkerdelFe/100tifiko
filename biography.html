@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Biografía</title>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <p>Mi portfolio</p>
+            <ul id="nav-links">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link active"><a href="biography.html">biography</a></li>
+                <li class="nav-link"><a href="projects.html">projects</a></li>
+                <li class="nav-link"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button class="accordion">wzrextcyvubinm</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+        
+        <button class="accordion">Vida personal</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+        
+        <button class="accordion">Vida profesional</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div> 
+
+        <button class="accordion">Polémicas varias</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div> 
+    </main>
+    <footer>
+    <p>Pedro Tooooooooooooooooomás 2025 &copy;</p>
+    <ul class="contact-list">
+        <li class="contact-link">
+            <a href="https://linkedin.com">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </li>
+        <li class="contact-link">
+            <a href="https://github.com">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </li>
+    </ul>
+    
+    </footer>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+} 
+
+    </script>
+</body>
+
+</html>
