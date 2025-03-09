@@ -14,73 +14,66 @@
     
 <body>
     <header>
-        <nav class="navbar">
-            <p>Mi portfolio</p>
-            <ul id="nav-links">
-                <li class="nav-link"><a href="index.html">Home</a></li>
-                <li class="nav-link"><a href="biography.html">biography</a></li>
-                <li class="nav-link active"><a href="projects.html">projects</a></li>
-                <li class="nav-link"><a href="contact.html">contact</a></li>
-            </ul>
+        <nav>
+            <div id="logo_homer">
+                <a href="index.html"><img  src="img/icon.png" alt="logo_icon"></a>
+            </div>
+            
+            <div id="lista">
+                <ul>
+                    <li class="nav-link active"><a href="index.html">Homer</a></li>
+                    <li class="nav-link"><a href="biography.html">Biografía</a></li>
+                    <li class="nav-link"><a href="projects.html">Proyectos</a></li>
+                    <li class="nav-link"><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <section class="projects">
-            <h2>Temporadas</h2>       
+            <h1>Temporadas del documental Simpson</h1>       
             <section class="projects-list">
                 <article class="project">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIVYWVToZm6_tSrRoIoex-MRfSGv2LjlIBzg&s" alt="imagen de proyecto 1">
                     <div class="project__info">
-                        <h3>Introductio Viejunis</h3> <!--Cursiva?¿?¿?-->
+                        <h3>Introducción viejuna</h3> <!--Cursiva?¿?¿?-->
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi! Commodi, nam iure maxime deleniti me caguem a su madrum horribilis
-                            debitis recusandae blanditiis doloribus.
+                            Las dos primeras temporadas del documental que sigue las peripecias de la familia Simpson tienen mucho corazón,
+                            pero pueden haberse quedado algo viejas con el paso del tiempo. Mucha nostalgia.
                         </p>
-                        <a class="project__link" href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
+                        <a class="project__link" href="https://www.youtube.com/watch?v=5sfuH6vFahk" target="_blank">Acceder</a>
                     </div>
                 </article>
                 <article class="project">
-                    <img src="data:image/jpeg;base64,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" alt="imagen de proyecto 1">
-                    <div class="project__info">
-                        <h3>Tempus aureum</h3>
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEBUQEBIVFRUVFRUXFRUWFRAVFRUVFRUXFxUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGBAQFy0lHx0tKy0rLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tKy0rLS0tLS0tLS0rLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABCEAABAwIDBAcGAwcDAwUAAAABAAIRAyEEEjEFQVFhBhMiMnGBkUJSobHB0SNyghQzYpLh8PEHotIkQ7IVY3OTwv/EABoBAAIDAQEAAAAAAAAAAAAAAAABAgMEBQb/xAAkEQACAgEFAAMBAAMAAAAAAAAAAQIRAwQSITFBEyJRMgVCUv/aAAwDAQACEQMRAD8A8xQhCCY11MG+h4ixSdofxfA/b5J6EAR9lxvr6O8ksOH8Q52PrvT3NB1CZkO53kbj7/FAiOtiIFteBVMkm5T8Y45ocNBuuFCBwKYrHJWuIuLJubilCYCvcSZKSUIQAJEJCgQFaeHfLQeSyrkgASSYAFySdAAus2H0XrPb+K4Ug03EZn3AdxhtnDimk30FpdmWSklde3odR31axPjSHwyKnj+iRY0vp1hDQSRUEWAk9tmn8qk8cl4JZYnL1bEO42P0/vmg3srGNwlSn2KzHMJFs0X/ACuEg+RVRr7SfPkRqoohkXqM57YJHBTB9l0exOixxJ62qXU6doAAzv5ie6F0uH2Hhg7q6NFkN/eVHAPdPuNLp7XE6Dx0nHFJh8iR5wHqGs6SvYDsjDEZTQpEC37tn2WPtPoThqgmlNF38MuZ5tP0ITeGQfMmcHgW9meJ+SsE71NjNnVMO4UqrYMWIu1w3lp338wq9TcOJ+Auf75qHRB8sKQtzNynUBJLvJvhvKSpwGpt9z6KdrYEDckyyC9FQhKoloiVCEgBCEIGC3dhUcM8dXVs5zxB4NEdkc3EwsNOZUIMgwRoqpxclSLsORQdtWOxNMAlvMj6LPzhvZcYjTmNxV17iSSdSoalJpMkSpxtIpypSYqEITAVCRKmAgISqbC0WuYMzRYvE6Edo6EXCH4Nw7rp5O+jh9QUAZmObcHiPkq0BaeIp2yvBbwJ0nkdFnPYQYITExt/FJbwTkFMiJdAKI4JDzCAFKY4pfirmxcL1tdrSLDtOHEN3epCaTbpCbpWdn0L2EKdMYioAajxLZ9hp4fxHf6Lo8IO8eL3fDs//lGC/dt8AlwlnVG8Hz5OaHT65h5LYoqPBlcm+SwAquPGZ1Onuc/M78tMZvTNkHmriqOH/UN5Un/7ns/4psih+LwjKrDTqNDmnUH5g7jzXEYfo+G4moC7OxjwGcXOIae1uOWY5ldxjq/V0n1InK0kDiYsPWFibLpw5jTe8k8XXcXHmXSfNShjUpW/BSm1Gl6alYFjG0qZh7uyHe6NX1PIacyBvVvD0GsaGNEAafcneeagwwzVHv8Ad/Db4CC4+bjH6ArgRduwfHAkIITK9drBLjEmANS48GgXJ5BQxVfv6pvAZXVD4ky1vhfxCVgQbb2Y3EUTTNiLsd7rxofDceRXmWU5iHCC2WkcHT2h8AvVBs+lvZnPGoTUPkXkx5LhOl+GbSxTi1sNextSwgTdro/kB81nyx9LIPijIpCXE8LD5n6KdR0Gw0TrqfE3KlWdmuKpCJUISGCEIQMEIQkAIQhIAQhCAI0IQpACEqEAS4Ou1oyuMGTE2BkzY6eSvSsxIwZe6S3w0/lNkAahVWtgGOEC3hp6faExuMcO8AfCx9D91YpYhjrA34Gx9CgDn6zcri3gSPRNUmIHbdzc4/EqNMiCRKkTChpC1ei9UNrkH2mkA8DIN/H7LLKs7IcBXaHWDpaTvE90jnmDVLG6kmQmri0eo7JfNOOBP3UuIOR7am4wx/IE9hx8HEj9fJY2yMblcWv1sHcCPZeOXyXQOaHAtcAQQQQdCDqFunzyjHH8JQqle1em7c5tRn6uy8fBj0YV5aeqeZIHYcfbYOfvDQ+R32dtGC3LMPJBpwHOdnaZBDW3InXkSoSlStjS5oi22PwHeLJ8OsbPwWVQqZXNdwI/qt1+DrVqZY6mKYe0g53gubI3NYCDH5goW9Gam+syf/id/wA1VD/IaeDalIlLT5JVSH7KvRY73hnPi8l5/wDJSYvE5AIGZzjDG6ZneO4AXJ3AJMFs2vQptp9mqGNDZaSx8Cw7Lrf7lDgjnqPqOBBBNNrXAtcxg1lpuC5wJneA1PHqMc39HYSxyXLRLhcKQc7zmqEQXaAD3WD2W/ExdWkgUD8bTBjOCRqBLiPJslW8Ir5ZOVxH+oTfxMPzFUHwBpn7+q679sbwqf8A1Vv+K4/ppiWvrUmg9ym4mQQRncALH8hVWV/UtxJ7jCCcmhOCyGwEIQgAQhCQxpdyMC5IvE8d+5OBS0amVxMSCADGoibxv1Uhw4cM1Ii+o9knf+UoAiJTQ42DhEiRwI1tz5JWmR6gjmDB+SXOMuSpdu529vCfDikAITWToTMEibXANinIAjQlQpAIlRCIQAIQhAD8M0F5BAPZ3id6nfgmHSR8R6GR6KvSfldmibRaJ1HFTVMc2LHtbgbHxgoAz8fhiCIgwN1vCx+6pG2tvFXyUROqExUUEI4+J+aFIQhTHJ6QhAHY4DECvSa8GHttOuV0Xkb2nhvC2tm7WI/DqC43TJji0nvN+I3rh8AXUiHMPa9oHRw90/db9PaFCoAHnKRuccpB4tdv8it+HLGSqXZjyY3F8dHUVa7a0UqfaqHtA9odVH/dJ3RMADvExpJG/s/ANpC0ueYz1HRnfHEjQfwiANyy+ieByUusdJfVhxJiQ3/tt03N+JK6ALz2u1PyTcYvhGzFj2x57FASwiEqwlpCXuz5chy5Zzy2Jnu5dZ3zooMdghUgg5Xt7rxqP4XD2mnePSDBV1Q9Uc5fndBAGS2UEbxaZKcJuLtPkGrVM5+nQc8u67Vri00xOQRvJ1qSCDe0EWm6tNAAgAADcLD0UW1hT69xe1x/Dp3DapA7VWZLRDbFtzyVZobY0qxg6ZialM2mMx5cHL0eny7salIwThUqRcqVA0FzjAAJJOgA1JXl21doGrWqVxdrjYHcxtmxwMXjiStfpNt91aaDBla0xUM99wOgPuT4SufawF9+H13p5ZXwSxqmWQlSBKqDSCEISGCEIQAJKNJ5LnMdBDgItBGUG/HXf8EqGkgy0wfgfEIAZTMWNnXJBEG5kmOF+alY0kwEYitmaAW9oObBFxreDutxUmGrFjg9urSCN9wZCiyyCV8jKlEsJaRBFiNIKjVnG4k1HuedXEk+JVdCuuRTST4GIQhTIAhCEACEIQASsys/MZPl4K5jHw2OP9lUAmJj2vcND9VKzE8R6fZR1KeWJ1O7go5RQgTmNJMBSUcOXX0HH7K4ym1g4cyUwKHVGC7gYUavYnENykAzKpIAvUcSC2TaNVXpVesq02uMMNRgPgXAElV3KNwSoD6Aw2gHJWWrnOilQ1cJSq0XT2AHU6hdGdogw+7mgm+jhBEQtTD7QcWzUoV6d4g0y/lI6rMY5kBcaeCcW+C7cmaQSyqH/qtASS+ImZa8RGsyLKUYue5TquPDq3s9HVcrT6qtY5PwCRmGY17qgBzPgOOZxBy6WJgeSDXbmyC5Akx7PCeBPBQYVtes2Xtdh2yewcprEA73AlrJvpJjeEmGpMbVqdWAGgMaY3vbmLjO8w9oJ4g8FY8LUbYrtlKqfx6ni0eXVs+pKw9tYltDCFxcDUexjKbXHMczX6hhsGgAHy4rZ6R4djaFesS4EUXmA6BLWEA2vOm+LaLyJjANAF0MLWWEV/yUSbg2/wBJJJMkkkmSSSSSdSSdShrgH3tb6oASCc1o7twd91rZVD+iyEqracWeN2f0+CkFQjvDzFx91A0EqEjXA3BlCQwQTF0JHtkEcQgBTIjMInThfmnKeli2xDxltrq313ecIr0GthzbAkCN0HhwUWTirIgxPFJaNCnRNNsZuszGfdy7vNdPs7o219FrjYuIP6Ru89fRZ8mdQ7Ohi0jkjhHMTYW7tzZfUvLJnQ+oWK5qshkUlaKM2FwdMgQhIrjGKhCEwBCEIAoY53ajgPmjB0pMnQfNMxY7Z5x8lfo08oA/uUxDa2HDjJlOZQaLgKRVK2Lizb89yALajrUQ7XyKqsxp9oeit06odoUAV/2Ee98FWq0y0wVpudAngsyo8uMlMRGQmOCkKaUAeldAqrnYNhpGKlNzmOvEtDi4Aggg2eInnBC6uli8Se9lYAJLjT0A10qkTE8l5p/p1tYUq5oPPZq93lUG7zH/AIhek7TM4eo0GC5hYDwL+yD6uXNzylDJXjLYpNE2yqZ6hgfJLmy+Y7Tn9p8wALucdyOuq0AAAarBZs9YajRuBLWuzgaSQDa5KsVKmUTBOkBok3MAf5TaGJDi4QWlpAIdlm4kEQSCD9Cs0ZyTbQ2vCA43EVIaGmm06kB2YDk6o1sHwa7y1VmlTaxoa2wFgP6m5Op9U8lcL0wxzK1ShSpuPWjE0jTYCf3eXMa0AwQRETeBzVkd2Z14KqRqf6gYwMwbmTeq5tMeE5n/AO1pHmvMwuh6d411TFZL5aLco/M8Bzz6ZB5LngV0NLDbAz573coVFPv/AKfqEIZ3vI/MLQ+iuHZOmdUN1vD7aJ6FA0kLmHUj9TbHzH+UrHn83wcPEf4Uqa5gOvrcH1CBAx4PjwNj6J4ULqZ5OHA6jwI/vmhriN8cn/R3+UiSLACVtMfGYBtPGExtT3reOnqrFMKDNEI2WsIYK7jZm0z1biLCnTbAtqJErlNmYQvcGjUkAea7mns1jKbmE94BvOANfGSSubqpx6Z3NLHbHk4vbeMdVeXOEaW8FhvF11nSPZnVuEXBaL8xb7LmqlIzoVo08ouKoyarG3KzMQkJ/oNSTwA3qSpQe0AuY5oNgSN+sctN63UzijEITqVNzjlY0uIuYi3iTZCAalTWu+vqLFOQA0sBMkXGhSVKjW6n7p6zcR3zPFAiWvig4QAVG1jQJfN9APmpKdWmNxPMgKEuBdJm5TELULT3QR8QmNJBkJ9QN9knzUZTA1WGQDxCzqwGYxxWjoPALLJm6QAmlOSJgRmQZBgjQixBG8L0bo90tZXptoVjlq56IkwG1Iqskg+9G70XnZCfhK3V1WVInI9r4/K4O+iry44zXPg02j31hVTB1BFSu4gNcbEwAKbBlaSeBOZ08HhVts43qsJUqA3DCGnm7sg+pUGzMPXq0zUlrHNYOraATkqFgdY1C4NADmt7IbfNMrmY8LkmXNejOk23GUKcvaTnkUaUfiYh57vY1bSBImRLtI45vRDo5Va92NxpLsRU3GJYDqTFs0ACBoLLZweAp0qwPUEVHNM1nmm57ssSMzSbmQTcTc3VzGY5lMGSCQJiQABxe42Y3mfKVNtwWyK7ErZxnTTANZU60TmqPuN2Xq2gHkQWP9QuNpkGY0l0eErqOkO2W1x1bRmGYOfUuMxaHBrKbTcUxndc3cSSuYbqfzO+a26dNcP8JaxSWKN/o5Izv/pPzCVFPvfp+q0PowY+ydCEKBpBCEJAKiEkpWuB0KRNA2mR3THI3H9FLREfw89Wf0+CRqu4Vt1XJ0jXgjbOg6M1gyo11SwE9oXGluYXcFocARed/JctsDYocxz4ibN1Ane6N666jTDWhvAAei4mqknLg7f8xX6c10tqAgMykkQT4bwPJcptPGCpUzGs1tgA1wggC28heg7coNNJ5y3ym++wn6LzfEVW5jePG3zWnSNONFWd/VNEfR/DCHVTcyWt5AWMcyZ9FBt19Q1MpByNgtgGCSLuJ46iN3mtLYdPLQZO+XfzuLh81ee8NBcTAFyToF6JQuFHld32s5TD4SrUMMaQPecCGjnfveAWv2aLOqpdpxtNpLiNSeO/kFcBdUuZY3cNHuHEn2Ry18E1tFlPtBrnE2ECYGuURZo5mOZRHGog5WZW0NmU6VLMCcwLQbkhxcYNjpqTbgs4LU21ReWirUdEOAbTFx2rTO98SZ0ifFZgVOVUycOgWfjR2/ILRCoY5va8QoEmNp1Wj2J5kqSlh83aJiUzDFoJLvKVPha5cSD4piKlVkEjgimO0PEfNOrmXHxRQHaHigC5inQw87LPVvGPsAPFVUAIkTkhQA0qXD0ZMnRRBsmFpUGXA4KvJKlRo02LfK2b+0tsOrYNuFIIILcz5BzNZ3bcZifBdp0dx7sTQdUY00qjSWGHAse5rGkEtcIgyAbTaJXBYbZ1eo0vp0nuaPaAtbWJ73lK7XoRVazDMa+Wl7nObma5rXZnHLDiIJIywJlZ4OrRq1UMaj9ezQ2rjCaD8RlOWk0vYDLC98RJPea3tFtoJvu183x2Pq1v3jhEyGNGWmDxy7zzcSea9E6b1IwNXmabfWqwH4SvM05P8HosaabaAhVcTTy9oWHtDdHFW017QQQdClFtM1Z8SyQaZUS0+/8Ap+qYyYg6ix8RvTqff/SfmFtfR5yKqVMnSoQoGgEhP0EcyYCVId3JzT5BwP0SAbXBAMgix1t8dFosFN4HddzsT6jRDMSw2zAcjY+hTK2CpmXAZXRq2x+CRNDzg/dJHI3H3U2Afp/ehhUKNd4AIcfA9r+vxUtB8fE+plVzVo14J7Weo9G8Q11ENGrZB8ySD/fBaIri87iuD6NYo5nHMRlgQCRJMm/hHxXQ18bM2yje4lunKPquTl0k91pdnajLHLlsv7aqgUHk72x62+q82xU5rO9QD8VtbcxpLcwdDBAa0g9txNy0eB15Fc3UrXWrT6d47szZ80apGwcTPZpAOOhd7DfE7zyHwSjCiQXkvIuJ7oPENFvMyeasAbgqW1MeKTLXe6zG8+J5BegdJWzzHYrtp0ASDVYCDBGYSCFXr7bpDuAvPIEN83H6SsAA7zJ3nid5Swszzvwt+NEuIxD6js1Q6d1o7rfDieZTAkSqpu+yaVCta46NJvFsv1KgxlFxbOV0j+E+eiv7PNnfmPyCtoA5Unj9lNhagDuS0MS0BxA/xyUDqbTqB6BFioq1wMxgzN0xBFyBxPzQpCESoQgQiQpUkSY4oBc8E+EZ7XHRdF0c2YK9ZtN3du5/NrY7PmSB4SsnDU/QLuuiGx3Bn7QapZnFg0NkMBNy5wMTrYeax5ZnVUfixD+mO2DRZ+zUey4slxbAyU7gBvAmD4AeC1MFhXUKVOk8Z6LmNYQ65puLQA0z3qbjIG8EgXBtlbV2dhqzXYik19XK15fUz1CyplYcrGmYeSco7NtRyWpSNGs3q6T+rf2XdXma8dlweDlzEESBdhB5qpOKjTRmk1SopdLXFuDqUS4mH0SwkychfYE7yCwieGWbyuGXW9M6rjTyublIdSBvLTJqOBa7eOx4ibrklOLuKNujVRYISoTNZTxDYfPvD4j+nyTGHtj8p+bVYxTJbI1Fx5aj0Vame2Pyu+bVqxu40cLV4tme/wBLKVIlTKwQhCQAUjWxoSPAkD00TkJDALW2bsxr6baj3OGYSAMoEHTUTMQshX8DtR1NgYW5g2zTMEDcDbdxU4bb+w3KXh0GDw7KQIYDcyZJJJ03qvW29SaSBmdG9oETyJIWHi9pValiQ1vutm/i7U+UKqETkv8AUsjOS7NDaW0utNm5RaSTLjG7g0eGqpFyYhV9g5nR7QxzKTZddx7rRq4/Qc1zNWo57i95lx9ANzRyTXElxc4lzjqTr4chyCVXZMrkZ4xoElQ29PndKm1hLSOR+SrRIunBDc5w/lPzCYcE7c8ebfsVPRrscBDgbDeFKmBSGGqtu0i9yJETEb28AN6XrK41aD5A/J30V1CAoxMZiu1dkHfcjwsQohihwPwTtrD8Y+DVVCdEbDeeZJ+KEFCYAkSpECYEqXCs9r0UMSY/uFo0KLrbhz+yryOjTpce6Vlqm2Au96GYnPhSwjNkLmltrjvAX5OAXAllpJPrHyXYf6dzlrWMZ268cgn4QseRXFs6Go/lI0sPs6nQwzKNYipU6vq2NtE5YPVtOm8l8T8AnUqbMTTYSxvX4c9kEDvNLmW/9t+RwB5cWqbaA/6httWFwMD2YYQT+tseaXYwJe90dlrnNDrdsl5e6OTSY8cyrf8AG99nOrmjH6dPmnSMEdoW39ptQwf5CuN60aTMaxJ+S6Tp5jQanUQZa5j3PEQB1bgG8Z7ZM7lzrQBYK6HEEdLTJ7RG1AbTfgbH0Kckc0GxEphaR3b8ifkVI0W12SLPY3LUy8A6PAlpH28lcp1J1BChxLYe13EFp+Y+RVmN0zHrIqePcvB6VIlptzPDZixOk6ED6q45gIU37G73h/KR8ZUdWi5okxFtCZuY0hIBqEIQAIQhIdghCEBYqEiVAiMISoTAEJUJgNLQdQPRNFMDSR4Fw+RSoQA8OePbd55T8wnivU94ebfsQkQgRWxrS4FxibaDcP8AKoIQpAKhCECBNJQhAi9s6j7R1+S0IQhZJu2d3TxUYJIZVFrf3F1qdGekbMM9weCab4JIF2OAiY3giB5BCEKKkqZDVdHSbP27TxVZ5ph2Wm1oDnCC4vcS4gagfht15rV2PWAZ1RMPZIIOpEmHjiDMzxkagoQoZscfipeHOXEjg+lO0KdbFVXMIIAFMEaOyiCRxuSPJUAEqFLbSo6emdxFQhCDSCixNOWkDXUeIuEIQiM0nFpkVN0gHinAkOzNImCLiRBjnyQhajz5KMU+whpJMe0343T64qublyt3aPO4g72jghCQEJpvGrHf7T8imgoQmAqEISAEIQkAoQhCAP/Z" alt="imagen de proyecto 1" width="300" height="260">
+                    <div class="project__info" >
+                        <h3>La epoca dorada</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! 
+                            De la temporada tres hasta la siete estaríamos en la parte que se conoce normalmente como "Los Simpsons". Humor, gags y mucho desarrollo
+                            de personaje para cimentar una parte irrepetible de la sociedad occidental.
                         </p>
-                        <a class="project__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
+                        <a class="project__link" href="https://www.youtube.com/watch?v=TrZLencLtf0" target="_blank">Acceder</a>
                     </div>
                 </article>      <!--fuvhbjfidnvokfdmvomefokvn9efn9vn-->
                 <article class="project">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDQUS6_B3JAYnusc4ciJSWLHbFr11bg2MgXA&s" alt="imagen de proyecto 1">
                     <div class="project__info">
-                        <h3>Non Malus Omnino</h3>
+                        <h3>Aun muy recomendable</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
+                            Todavía con humor y encanto desde desde la temporada ocho hasta la diez, pero con ciertos pecados que acabarían costando caros. 
                         </p>
-                        <a class="project__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
+                        <a class="project__link" href="https://www.youtube.com/watch?v=HC9Ll8yRRlI" target="_blank">Acceder</a>
                     </div>
                 </article>
                 <article class="project">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVh51e6SJY79P0wWQniUzSo3ZXDrssSpQD6w&s" alt="imagen de proyecto 1">
                     <div class="project__info">
-                        <h3>Initium Declinationis</h3>
+                        <h3>El principio del bajón</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
+                            Los vicios que acabarían por quitarle el encanto al proyecto se volvieron norma y, aunque todavía aguantaba el humor,
+                            poco quedaba de los personajes iniciales.
                         </p>
-                        <a class="project__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
+                        <a class="project__link" href="https://www.youtube.com/watch?v=asTmYxF1ahE" target="_blank">Acceder</a>
                     </div>
                 </article>
                 <article class="project">
@@ -88,184 +81,63 @@
                     <div class="project__info">
                         <h3>Stercus Punctulatus In Baculum</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
+                            A pesar de un pequeño repunte entre las temporadas trece y quince, la verdad es que nunca volvió esa chispa de la época buena.
+                            Poco a poco se va viendo como el proyecto Simpson de desvirtúa. 
                         </p>
-                        <a class="project__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
+                        <a class="project__link" href="https://www.youtube.com/watch?v=qKATzUrmgfU" target="_blank">Acceder</a>
                     </div>
                 </article>
                 <article class="project">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVaELtRS_cnn17lBSRoKxDHoZ5asIE1Zf1A&s" alt="imagen de proyecto 1">
                     <div class="project__info">
-                        <h3>Cedere, Iam Mortuus Est </h3>
+                        <h3>Dejalo, ya esta muerto </h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
+                            A partir de la temporada 20, la serie que muchos vienen a llamar como "zombie-Simpsons" sigue viva por inercia y la necesidad de exprimir la gallina de los 
+                            huevos de oro que lleva tiempo sin poner uno solo.
                         </p>
-                        <a class="project__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
+                        <a class="project__link" href="https://c.tenor.com/pXe-GokoyA0AAAAC/tenor.gif" target="_blank">Acceder</a>
                     </div>
                 </article>
             </section>
 
-            <!--CAMBIOOOO-->
 
-            <h2>Merequetengues del Internet</h2>                <!--OJJJJARDO-->
-            <section class="experiences-list">
-                <article class="experience">
-                    <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
-                    <div class="experience__info">
-                        <h3>Proyecto 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
-                        </p>
-                        <a class="experience__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
-                    </div>
-                </article>
-                <article class="experience">
-                    <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
-                    <div class="experience__info">
-                        <h3>Proyecto 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! 
-                        </p>
-                        <a class="experience__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
-                    </div>
-                </article>
-                <article class="experience">
-                    <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
-                    <div class="experience__info">
-                        <h3>Proyecto 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
-                        </p>
-                        <a class="experience__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
-                    </div>
-                </article>
-                <article class="experience">
-                    <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
-                    <div class="experience__info">
-                        <h3>Proyecto 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
-                        </p>
-                        <a class="experience__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
-                    </div>
-                </article>
-                <article class="experience">
-                    <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
-                    <div class="experience__info">
-                        <h3>Proyecto 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
-                        </p>
-                        <a class="experience__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
-                    </div>
-                </article>
-                <article class="experience">
-                    <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
-                    <div class="experience__info">
-                        <h3>Proyecto 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
-                        </p>
-                        <a class="experience__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
-                    </div>
-                </article>
-                <article class="experience">
-                    <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
-                    <div class="experience__info">
-                        <h3>Proyecto 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                            excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                            debitis recusandae blanditiis doloribus.
-                        </p>
-                        <a class="experience__link"href="https://google.com" target="_blank">
-                            <button>Acceder</button>
-                        </a>
-                    </div>
-                </article>
-            </section>
 
         <!--CAMBIOOOO-->
             <section>
-                <h2>Poderes Predictivos</h2>                <!--OJJJJARDO-->
+                <h2>Meme generator 3000</h2>                <!--OJJJJARDO-->
                 <section class="experiences-list">
                     <article class="experience">
-                        <img src="https://placehold.co/600x400" alt="imagen de proyecto 1">
+                        <img src="img/ralph-danger.jpg" alt="imagen de proyecto 1">
                         <div class="experience__info">
-                            <h3>Proyecto 1</h3>
+                            <h3>Proyecto Memerator</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                                excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                                debitis recusandae blanditiis doloribus.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                                excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                                debitis recusandae blanditiis doloribus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore unde ex at, inventore sed,
-                                excepturi cupiditate assumenda quae non natus consequuntur! Commodi, nam iure maxime deleniti
-                                debitis recusandae blanditiis doloribus.
+                                Desde que el internet es internet, se ha luchado por generar la mayor cantidad de humor e imágenes representativas
+                                conocidas popularmente como "memes". Y pocos autores de memes son tan icónicos y productivos como los relacionados
+                                con el universo de los Simpson. Crea tu propio meme de cero aquí:
                             </p>
-                            <a class="experience__link"href="https://google.com" target="_blank">
-                                <button>Acceder</button>
-                            </a>
+                            <a class="project__link" href="https://frinkiac.com/caption/S14E09/1102935" target="_blank">Acceder</a>
                         </div>
                     </article>
                 </section>
 
             </section>
-
-        </section>
     
     
     </main>
     <footer>
-        <p>Graphic Design 2025 &copy;</p>
-        <ul class="contact-list">
+        <p>Homer Simpson 2025 &copy;</p>
+        <div class="icons">
             <li class="contact-link">
                 <a href="https://linkedin.com">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <img src="img/linkedin.png" alt="linkedin">
                 </a>
             </li>
             <li class="contact-link">
                 <a href="https://github.com">
-                    <i class="fa-brands fa-github"></i>
+                    <img src="img/github.png" alt="github">
                 </a>
             </li>
-        </ul>
+        </div>
 
     </footer>
 </body>
