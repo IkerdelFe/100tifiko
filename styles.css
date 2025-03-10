@@ -300,7 +300,7 @@ footer #lista a{
 }
 
 
-@media  (max-width:360px) {
+@media  (max-width:600px) and (min-width: 360px) {
     h1, h2{
         font-size: 1.8em;
         font-family: 'SimpsonfontDEMO';
