@@ -8,8 +8,8 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="persons.js"></script>
     <title>Contacto</title>
-
 </head>
 
 <body>
@@ -31,11 +31,8 @@
         </nav>
     </header>
     <main>
-        <form id="contact-form">
-   
-            <fieldset>
-                <h1>Personajes Simpsons</h1>
-                
+        <h1>Personajes Simpsons</h1>
+
                 <div class="controls">
                   <input type="number" id="character-id" min="1" placeholder="Enter character ID">
                   <button id="fetch-one">Fetch Character</button>
@@ -43,35 +40,11 @@
                   <button id="fetch-all">Fetch All Characters</button>
                 </div>
                 
-                <div id="character-container"></div>
+                <div id="character-container">
+                    
+                </div>
               
-                <script type="module">
-                  import { 
-                    fetchAndDisplayCharacter, 
-                    fetchAndDisplayMultipleCharacters, 
-                    fetchAndDisplayAllCharacters 
-                  } from './simpsons-api-client.js';
-              
-                  // Eventus listeners
-                  document.getElementById('fetch-one').addEventListener('click', () => {
-                    const id = document.getElementById('character-id').value;
-                    if (id) {
-                      document.getElementById('character-container').innerHTML = '';
-                      fetchAndDisplayCharacter(id);
-                    } else {
-                      alert('Please enter a character ID');
-                    }
-                  });
-              
-                  document.getElementById('fetch-family').addEventListener('click', () => {
-                    // IDs 1-5 para miembros de la famiglia
-                    fetchAndDisplayMultipleCharacters([1, 2, 3, 4, 5]);
-                  });
-              
-                  document.getElementById('fetch-all').addEventListener('click', () => {
-                    fetchAndDisplayAllCharacters();
-                  });
-                </script>
+
 
                     <div class="user-info--image">
                         <img id="homie_resp"src="img/homer_responsive.PNG" width="300" height="300">
@@ -92,8 +65,6 @@
                       
                     </div>
 
-                </fieldset>
-            </form>
             
 
     </main>
