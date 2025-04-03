@@ -1,112 +1,159 @@
-/**
- * Fetches a character from the Simpsons API by ID
- * @param {number} id - The ID of the character to fetch
- * @returns {Promise<Object>} A promise that resolves to the character data
- */
-async function getCharacterById(id) {
-    try {
-      const response = await fetch(`https://api.sampleapis.com/simpsons/characters/${id}`);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      
-      const character = await response.json();
-      return character;
-    } catch (error) {
-      console.error('Error fetching character:', error);
-      throw error;
+async function getSimpsonsShow() {
+  try {
+    const response = await fetch('https://api.tvmaze.com/shows/83?embed=cast');
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
+    const showData = await response.json();
+    return showData;
+  } catch (error) {
+    console.error("Error fetching Simpsons show data:", error);
+    throw error;
+  }
+}
+
+async function getAllSimpsonsCharacters() {
+  // Comprobar localStorage
+  const storedCharacters = localStorage.getItem('simpsonsCharacters');
+  if (storedCharacters) {
+    return JSON.parse(storedCharacters);
   }
   
-  /**
-   * Fetches all characters from the Simpsons API
-   * @returns {Promise<Array>} A promise that resolves to an array of character data
-   */
-  async function getAllCharacters() {
-    try {
-      const response = await fetch('https://api.sampleapis.com/simpsons/characters');
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      
-      const characters = await response.json();
-      return characters;
-    } catch (error) {
-      console.error('Error fetching all characters:', error);
-      throw error;
-    }
-  }
-  
-  /**
-   * Display character information in the DOM
-   * @param {Object} character - The character data to display
-   */
-  function displayCharacter(character) {
-    const characterDiv = document.createElement('div');
-    characterDiv.className = 'character-card';
+  try {
+    const showData = await getSimpsonsShow();
+    const characters = showData._embedded.cast;
+    const charactersWithImages = characters.filter(character => 
+      character.character.image && character.character.image.medium
+    );
     
-    characterDiv.innerHTML = `
-      <h2>${character.name}</h2>
-      ${character.avatar ? `<img src="${character.avatar}" alt="${character.name}" width="150">` : ''}
-      <p><strong>Occupation:</strong> ${character.occupation || 'Unknown'}</p>
-      <p><strong>Quote:</strong> "${character.quote || 'No quote available'}"</p>
-      <p><strong>Voice:</strong> ${character.voicedBy || 'Unknown'}</p>
+    const uniqueCharacters = Array.from(
+      new Map(charactersWithImages.map(char => [char.character.name, char])).values()
+    );
+    
+    // Guardar en localStorage
+    localStorage.setItem('simpsonsCharacters', JSON.stringify(uniqueCharacters));
+    return uniqueCharacters;
+  } catch (error) {
+    console.error("Error getting characters:", error);
+    throw error;
+  }
+}
+
+function findCharacterByName(characters, name) {
+  const searchName = name.toLowerCase();
+  return characters.filter(character => 
+    character.character.name.toLowerCase().includes(searchName)
+  );
+}
+
+async function drawSimpsonsFamily() {
+  const characterContainer = document.getElementById("character-container");
+  characterContainer.innerHTML = '<p>Loading Simpson family...</p>';
+  
+  try {
+    const allCharacters = await getAllSimpsonsCharacters();
+    const familyNames = ["Homer Simpson", "Marge Simpson", "Bart Simpson", "Lisa Simpson", "Maggie Simpson"];
+    const familyMembers = allCharacters.filter(character => 
+      familyNames.includes(character.character.name)
+    );
+    
+    drawCharacterCards(familyMembers, characterContainer);
+  } catch (error) {
+    characterContainer.innerHTML = '<p>Error loading Simpson family members. Please try again.</p>';
+  }
+}
+
+function drawCharacterCards(characters, container) {
+  container.innerHTML = '';
+  
+  if (characters.length === 0) {
+    container.innerHTML = '<p>No characters found with images.</p>';
+    return;
+  }
+  
+  characters.forEach(castMember => {
+    const character = castMember.character;
+    const characterCard = document.createElement('article');
+    characterCard.className = 'fichaPersonaje';
+    
+    const imageUrl = character.image.medium;
+    
+    characterCard.innerHTML = `
+      <img src="${imageUrl}" alt="${character.name}">
+      <div class="infoPersonaje">
+        <h3>${character.name}</h3>
+        <a class="info_link" href="${character.url}" target="_blank">Info</a>
+      </div>
     `;
     
-    document.getElementById('character-container').appendChild(characterDiv);
+    container.appendChild(characterCard);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const characterContainer = document.getElementById("character-container");
+  const searchInput = document.createElement('input');
+  searchInput.type = 'text';
+  searchInput.id = 'character-name';
+  searchInput.placeholder = 'Search by character name';
+  
+  const searchButton = document.createElement('button');
+  searchButton.id = 'search-character';
+  searchButton.textContent = 'Search Character';
+  
+  const controlsDiv = document.querySelector('.controls');
+  controlsDiv.prepend(searchButton);
+  controlsDiv.prepend(searchInput);
+  
+  const fetchFamilyButton = document.getElementById('fetch-family');
+  if (fetchFamilyButton) {
+    fetchFamilyButton.addEventListener('click', drawSimpsonsFamily);
   }
   
-  /**
-   * Example usage to demonstrate fetching a specific character
-   */
-  async function fetchAndDisplayCharacter(id) {
-    try {
-      const character = await getCharacterById(id);
-      displayCharacter(character);
-    } catch (error) {
-      console.error('Failed to display character:', error);
-    }
-  }
-  
-  /**
-   * Example usage to demonstrate fetching multiple characters
-   */
-  async function fetchAndDisplayMultipleCharacters(idList) {
-    try {
-      const container = document.getElementById('character-container');
-      container.innerHTML = ''; // Clear previous results
+  searchButton.addEventListener('click', async () => {
+    const searchName = searchInput.value.trim();
+    if (searchName) {
+      characterContainer.innerHTML = '<p>Searching characters...</p>';
       
-      for (const id of idList) {
-        await fetchAndDisplayCharacter(id);
+      try {
+        const allCharacters = await getAllSimpsonsCharacters();
+        const foundCharacters = findCharacterByName(allCharacters, searchName);
+        
+        drawCharacterCards(foundCharacters, characterContainer);
+        
+        // Guardar búsqueda reciente en localStorage
+        localStorage.setItem('lastSearch', searchName);
+      } catch (error) {
+        characterContainer.innerHTML = '<p>Error searching characters. Please try again.</p>';
       }
-    } catch (error) {
-      console.error('Failed to display characters:', error);
+    } else {
+      alert('Please enter a character name');
     }
-  }
+  });
   
-  // You can also fetch all characters and display them
-  async function fetchAndDisplayAllCharacters() {
-    try {
-      const characters = await getAllCharacters();
-      const container = document.getElementById('character-container');
-      container.innerHTML = ''; // Clear previous results
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      searchButton.click();
+    }
+  });
+  
+  const fetchAllButton = document.getElementById('fetch-all');
+  if (fetchAllButton) {
+    fetchAllButton.addEventListener('click', async () => {
+      characterContainer.innerHTML = '<p>Loading all characters with images...</p>';
       
-      characters.forEach(character => {
-        displayCharacter(character);
-      });
-    } catch (error) {
-      console.error('Failed to display all characters:', error);
-    }
+      try {
+        const allCharacters = await getAllSimpsonsCharacters();
+        drawCharacterCards(allCharacters, characterContainer);
+      } catch (error) {
+        characterContainer.innerHTML = '<p>Error loading characters. Please try again.</p>';
+      }
+    });
   }
   
-  // Export functions for use in other files
-  export {
-    getCharacterById,
-    getAllCharacters,
-    displayCharacter,
-    fetchAndDisplayCharacter,
-    fetchAndDisplayMultipleCharacters,
-    fetchAndDisplayAllCharacters
-  };
+  // Recuperar última búsqueda
+  const lastSearch = localStorage.getItem('lastSearch');
+  if (lastSearch) {
+    searchInput.value = lastSearch;
+  }
+});
