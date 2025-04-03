@@ -13,7 +13,7 @@ async function getSimpsonsShow() {
 }
 
 async function getAllSimpsonsCharacters() {
-  // Verificar si hay datos almacenados en localStorage
+  // Comprobar localStorage
   const storedCharacters = localStorage.getItem('simpsonsCharacters');
   if (storedCharacters) {
     return JSON.parse(storedCharacters);
